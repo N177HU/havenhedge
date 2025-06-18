@@ -1,102 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Haven and Hedges Ltd</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haven and Hedges Ltd - Home</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f9f4;
-      color: #333;
+      margin: 0; padding: 0;
+      background-color: #e8f5e9;
+      color: #1b1b1b;
+      overflow-x: hidden;
     }
-    header {
-      background-color: #4CAF50;
+    header, footer {
+      background-color: #2E7D32;
       color: white;
       padding: 1rem 2rem;
       text-align: center;
     }
     nav {
-      background-color: #388E3C;
-      text-align: center;
-      padding: 0.5rem;
+      background-color: #1b5e20;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.7rem 0;
     }
     nav a {
       color: white;
-      margin: 0 1rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      padding-bottom: 4px;
     }
-    section {
-      padding: 2rem;
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: #a5d6a7;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+    main {
       max-width: 900px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      opacity: 0;
+      animation: fadeIn 1s forwards ease-in;
     }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+    h1 {
+      margin-bottom: 0.3rem;
     }
-    .service {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      flex: 1 1 250px;
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
     }
-    footer {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Haven and Hedges Ltd</h1>
+    <p>Gardening &amp; House Cleaning Services You Can Trust</p>
+  </header>
 
-<header>
-  <h1>Haven and Hedges Ltd</h1>
-  <p>Gardening & House Cleaning Services You Can Trust</p>
-</header>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<nav>
-  <a href="#about">About Us</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>At Haven and Hedges Ltd, we specialize in creating beautiful outdoor spaces and spotless indoor environments. Based in your local community, our team is dedicated to quality, reliability, and customer satisfaction.</p>
+    </section>
+  </main>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>At Haven and Hedges Ltd, we specialize in creating beautiful outdoor spaces and spotless indoor environments. Based in your local community, our team is dedicated to quality, reliability, and customer satisfaction.</p>
-</section>
-
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service">
-      <h3>Gardening</h3>
-      <p>Lawn care, hedge trimming, planting, weeding, seasonal maintenance, and full garden makeovers.</p>
-    </div>
-    <div class="service">
-      <h3>House Cleaning</h3>
-      <p>Regular home cleaning, deep cleaning, move-in/out services, and customized cleaning packages.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>📍 Based in [Your Location]</p>
-  <p>📧 Email: <a href="mailto:info@havenandhedges.com">info@havenandhedges.com</a></p>
-  <p>📞 Phone: +44 1234 567890</p>
-</section>
-
-<footer>
-  <p>&copy; 2025 Haven and Hedges Ltd. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Haven and Hedges Ltd. All rights reserved.</p>
+  </footer>
 </body>
 </html>
